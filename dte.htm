@@ -1,0 +1,182 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=FrontPage.Editor.Document>
+<title>O Fantástico Mundo das DTEs e MTEs</title>
+<style type="text/css">a{color:black;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+<style type="text/css">body{scrollbar-face-color:#FFCC00;scrollbar-shadow-color:#FFCC00;scrollbar-highlight-color:#FFCC00;scrollbar-3dlight-color:#000000;scrollbar-darkshadow-color:#000000;scrollbar-track-color:#FF9933;scrollbar-arrow-color:#FF9933}</style>
+</head>
+<body background=imagens/indtextb.jpg topmargin=0 leftmargin=0>
+<div align="center"> 
+  <center>
+    <table width="95%" border=1 cellpadding=0 cellspacing=0 bordercolor=#111111 bgcolor="#FFFFFF" style="border-collapse: collapse">
+      <tr> 
+        <td width=100% bgcolor=#FFCC00><p class=MsoNormal align=right><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b style=mso-bidi-font-weight:normal><span style=mso-bidi-font-size:10.0pt;mso-ansi-language:PT-BR>O 
+            Fantástico Mundo das DTEs e MTEs<o:p></o:p></span></b></font></td>
+      </tr>
+      <tr> 
+        <td width=100%><p class=MsoNormal align=right style=text-align:right><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b style=mso-bidi-font-weight:normal><span style=mso-bidi-font-size:10.0pt;mso-ansi-language:PT-BR>Versão 
+            1.0, por sl0wy<o:p></o:p></span></b></font></p>
+          <p class=MsoBodyText><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Bom, 
+            antes de tudo, olá. Resolvi escrever este tutorial após perceber que 
+            muitos tradutores ainda têm dificuldades em lidar com este tipo básico 
+            de compressão de texto.</font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Então, 
+            para sanar esta dúvida em várias pessoas de uma vez só, escrevi este 
+            tutorial.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Tente 
+            escrevê-lo da forma mais clara e simples possível, mas caso você ainda 
+            não tenha entendido, tente consultar outros excelentes tutoriais sobre 
+            o assunto, como o do GreenGoblin, em <u>http://hexagon.romhack.net 
+            </u>ou o do Neil_, em <u>http://www.romhacking.org</u>. Ou então você 
+            pode me contatar no IRC, nos canais #hexagon ou #tradu-roms. Agora 
+            vamos ao tutorial! :]<o:p></o:p><o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E 
+            então, o que são DTEs/MTEs?</span><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"><o:p></o:p></span></b></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Elas 
+            na verdade são um tipo muito simples de compressão chamada <b style=mso-bidi-font-weight:normal>compressão 
+            de dicionário</b>, usado pelos programadores dos jogos para economizar 
+            espaço no jogo.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Para 
+            isso, faz-se um verdadeiro dicionário com as palavras mais usadas 
+            no jogo, e armazena-se este dicionário em algum lugar. Assim, quando 
+            determinado byte aparecer no meio do texto, o jogo interpretará esse 
+            byte como sendo determinada palavra do dicionário.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Desde 
+            agora é bom esclarecer uma coisa: DTEs e MTEs são diferentes. DTE 
+            significa Dual Tile Encodig, ou seja, são apenas dois tiles (duas 
+            letras, números, qualquer coisa, contanto que sejam dois). Então caso 
+            o que está comprimido sejam três ou mais caracteres, esta seqüência 
+            de caracteres é uma MTE, ou Multiple Tile Encoding. Entendeu?<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Agora 
+            vamos analisar um exemplo:<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Tenha 
+            cuidado, bravo guerreiro. Há muitos perigos nesta estrada.</span></i><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"><o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Com 
+            uma compressão de dicionário, o programador poderia reduzir e muito 
+            o tamanho desta frase. Então agora suponhamos a mesma frase, agora 
+            com uma compressão de dicionário em algumas palavras, onde ‘*’ é uma 
+            palavra comprimida (lembrando que a palavra pode ser qualquer uma, 
+            certo?):<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">* 
+            cuidado, bravo *. * muitos perigos nesta *.<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Viu, 
+            com esta simples compressão, o programador pôde economizar muitos 
+            caracteres.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Obs: 
+            Como você pode ter visto, neste caso as palavras comprimidas são MTEs, 
+            pois são mais de 2 caracteres.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Como 
+            eu disse, estas palavras geralmente estão em uma espécie de dicionário 
+            com as palavras do dicionário.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">No 
+            caso do nosso exemplo, após você ter feito sua tbl básica com números, 
+            letras e acentos, abra seu editor hexadecimal preferido, vá até o 
+            lugar onde está o texto (no nosso exemplo, 'Tenha cuidado bravo...').<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">No 
+            nosso exemplo, o editor hexadecimal mostraria algo como isso:<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"># 
+            cuidado, bravo #. # muitos perigos nesta #.<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Antes 
+            de tudo, anote os hexadecimais que estão comprimidos. Suponhamos que 
+            no nosso exemplo eles sejam DD, E3, E5 e E8.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Então 
+            agora faça uma busca por estas palavras comprimidas (não pelo hexadecimal, 
+            pela palavra). No nosso exemplo eu faria uma busca pela palavra 'Tenha'. 
+            Então o editor hexadecimal me levaria para um lugar com várias palavras 
+            separadas por um byte, geralmente o byte de endstring.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">O 
+            editor hexadecimal então mostraria algo mais ou menos assim (onde 
+            # é o byte separador):<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">blabla#bleheh#Tenha#hsuhdu#aaaaaaa#jsks#<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">guerreiro#sadfdsf#Há#dfjss#dsfhksdj#estrada</span></i><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"><o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E 
+            assim até o fim dos valores do dicionário.<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Agora, 
+            abra sua tbl, e adicione os valores do dicionário. No nosso exemplo 
+            nossa tbl ficaria assim:<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">DD=Tenha<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E3=guerreiro<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E5=Há<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E8=estrada<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Caso 
+            você queira, aproveite para adicionar os outros valores do dicionário. 
+            Nossa tbl ficaria assim:<o:p></o:p></span></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">DC=bleheh<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">DD=Tenha<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">DE=hsuhdu<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">DF=aaaaaaa<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E0=jsks<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E3=guerreiro<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E5=Há<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal style=text-align:justify><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E8=estrada</span></i><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"><o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">E 
+            assim vai. Como você pôde ver, eu coloquei apenas algumas palavras 
+            para ilustrar o funcionamento da coisa. No seu caso, você deve adicionar 
+            todas os valores, para assim<span style=mso-spacerun:yes>&nbsp; </span>ver 
+            todo o texto do jogo.<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Explicação 
+            adicional: Às vezes, a MTE pode usar mais de um byte para sinalizar 
+            o valor do dicionário. Isso é usado quando o jogo tem uma grande quantidade 
+            de palavras para serem codificadas. Então geralmente são usados 2 
+            bytes. Assim, nosso exemplo poderia ficar assim:<o:p></o:p><o:p></o:p></span></font></p>
+          <p class=MsoNormal><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">F0DD=Tenha<o:p></o:p></span></i></font></p>
+          <p class=MsoNormal><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i style=mso-bidi-font-style:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">F0DE=hsuhdu<o:p></o:p><o:p></o:p></span></i></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Etc, 
+            etc. Então os 2 primeiros bytes não são alterados, sendo incrementados 
+            somente os 2 últimos bytes, como você viu acima. Então, quando os 
+            2 últimos bytes atingem <i style=mso-bidi-font-style:normal>FF</i>, 
+            os 2 primeiros bytes serão incrementados, ficando <i style=mso-bidi-font-style:normal>F100</i>, 
+            no nosso exemplo exemplo. Então, quando são usados 2 bytes para se 
+            representar um valor do dicionário, estamos lidando com MTEs 16 bits, 
+            com esse nome por motivos óbvios. Também por motivos óbvios, esta 
+            coisa só acontece quando trabalhamos com MTEs, já que se usássemos 
+            2 ou mais bytes para representar uma DTE não estaríamos economizando 
+            espaço nenhum.<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Agora 
+            é simples. Traduza esses valores do dicionário, e depois altere os 
+            valores da tbl. Pronto! Você achou e traduziu suas DTEs/MTEs!<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Agora 
+            seguem alguns conselhos básicos para você ao mexer com DTEs/MTEs:<o:p></o:p><o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">&gt;&gt;</span></b><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"> 
+            Caso você esteja traduzindo por dumps, eu recomendo que você dumpe 
+            o texto e o traduza, sem se preocupar muito com o tamanho do dump 
+            traduzido. Então na hora de inserir o texto, use primeiro um otimizador 
+            de DTEs/MTEs, um programa que analisa seu dump e encontra as palavras 
+            mais utilizadas no texto para serem utilizadas como MTEs. Com isso 
+            você economiza o maior espaço possível na hora da inserção. Como otimizadores 
+            de DTEs/MTEs, há o DTEStat, da BR Games (<u>www.kinox.org/brgames</u>) 
+            e o Martial (<u>www.romhacking.org</u>).<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">&gt;&gt;</span></b><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"> 
+            Um bom programa para te ajudar ao adicionar os valores da tabela de 
+            valores do dicionário à tbl (uma coisa que pode ser muuuuuuito cansativa), 
+            é o Table Manager, que você pode pegar em qualquer lugar, como em 
+            <u>http://hexagon.romhack.net</u>. Ele adiciona os hexadecimais dos 
+            valores automaticamente, e depois é só adicionar os valores. Com isso, 
+            já é meio caminho andado.<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">&gt;&gt; 
+            </span></b><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Às 
+            vezes, caso você esteja traduzindo um RPG por exemplo, o jogo pode 
+            armazenar<span style=mso-spacerun:yes>&nbsp;&nbsp; </span>nomes de 
+            personagens por exemplo em um formato como o das DTEs/MTEs. Aí é a 
+            mesma coisa que lidar com uma DTE/MTE na hora de colocar esses nomes 
+            na tbl.<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">&gt;&gt;</span></b><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR"> 
+            Caso você seja alguém que programe no assembly do console que você 
+            esteja traduzindo, você pode também criar uma rotina de DTE/MTE para 
+            comprimir o texto do seu jogo.<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font face="Verdana, Arial, Helvetica, sans-serif" size=1><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">Ufa! 
+            Acho que acabei o tutorial. Bom, como eu escrevi ele em umas duas 
+            horas no máximo, me reportem qualquer erro no tutorial.<o:p><br>
+            </o:p>Quando eu tiver tempo (e disposição), atualizarei o que puder 
+            no tutorial.<o:p><br>
+            </o:p>Acho que é só.<o:p><br>
+            </o:p>Tchau,<o:p></o:p></span></font></p>
+          <p class=MsoNormal><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b style=mso-bidi-font-weight:normal><span style="mso-bidi-font-size:10.0pt;mso-bidi-font-family:Times New Roman;mso-ansi-language:PT-BR">sl0wy 
+            - 07/01/2001 (19:09:59)</span><span style=mso-ansi-language:PT-BR><o:p></o:p></span></b></font></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+</html>

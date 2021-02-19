@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Tradu - Roms</title>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<style type="text/css">a{color:black;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+<style type="text/css">body{scrollbar-face-color:#FFCC00;scrollbar-shadow-color:#FFCC00;scrollbar-highlight-color:#FFCC00;scrollbar-3dlight-color:#000000;scrollbar-darkshadow-color:#000000;scrollbar-track-color:#FF9933;scrollbar-arrow-color:#FF9933}</style><meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<title>Tutorial de Tradução</title>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<title>Traduzindo textos</title>
+<meta name="Microsoft Theme" content="indust 001">
+</head>
+<body topmargin=0 leftmargin=0 background=file:///C:/WINDOWS/TEMP/FrontPageTempDir/mstheme/indust/indtextb.jpg bgcolor=#FFFFFF text=#000000 link=#3366CC vlink=#666666 alink=#996600>
+<div align="center"> 
+  <center>
+    <table width="95%" border=1 cellpadding=0 cellspacing=0 bordercolor="#111111" bgcolor="#FFFFFF" style="border-collapse: collapse">
+      <tr> 
+        <td width=100% bgcolor=#FFCC00><font face="Trebuchet MS, Arial, Helvetica"> 
+          <p align=right><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Criação 
+            de tabelas &amp; Procura relativa</b></font></font></td>
+      </tr>
+      <tr> 
+        <td width=100%><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp; 
+          Abram a rom do Terminator 2 no hexpose, observem a interface do hexpose 
+          na parte de cima o menu, que pode ser acessado com a tecla Esc no lado 
+          esquerdo ficam os códigos <b>hexadecimais </b>da rom, como eu disse, 
+          em pares bem, e no lado direito vocês podem ver que há alguns pontos, 
+          e letras que são os códigos hexadecimais da esquerda transformados transformados 
+          segundo o padrão ASCII. mas há um pequeno problema as roms muitas vezes 
+          não têm seus caracteres de acordo com a tabela ascii [padrão de letras 
+          definido pelos americanos] por exemplo ascii é o é composto de 255 códigos 
+          sendo eles, as letras, caracteres especiais, números, enter, espaço, 
+          esc, etc etc bem, como eu ia dizendo, muitas roms não tem seus valores 
+          de caracteres de acordo com o padrão ascii por exemplo a letra "a" do 
+          padrão ascii em hexadecimal é 61 mas numa rom 61 em hexadecimal pode 
+          ser b, c, 1, 5, 9, enfim, qualquer outro caractere e como seria difícil 
+          e ruim traduzir sem se ter certeza de como seria o resultado! para acabar 
+          com este problema, existe o que chamamos de tabela de caracteres(ou 
+          TBL), que é um arquivo .tbl que faz com que seja exibido no editor hexadecimal 
+          a letra certa em relação ao jogo por exemplo e a letra "A" é igual a 
+          41 em hexadecimal MAS a o valor correto correspondente a letra "A" no 
+          jogo, é 39 obs: o valor de cada letra pode variar de jogo para jogo 
+          então agora, vamos aprender como fazer essa tal tabela de caracteres! 
+          fazer uma TBL é muito simples<br>
+          antes de tudo, abram o table manager, bem, agora observem a interface 
+          do table manager observem essa grande tabela que ocupa a maior parte 
+          da tela do programa, com letras e números na esquerda e em cima bem 
+          agora, vocês devem 'cruzar' os números/letras da esquerda com os de 
+          cima para formar a TBL! por exemplo lembram-se que eu disse que o valor 
+          correto da letra "A" no jogo terminator 2 era 39? pois agora combinem 
+          o numero 3 da esquerda do table manager com o 9 de cima! com isso, é 
+          como se o numero hexadecimal 39 fosse formado agora, cliquem no quadrado 
+          correspondente ao 39 clicaram?<br>
+          bem, agora, digitem a letra "A". Pronto! Formamos nosso primeiro item 
+          da tbl! agora, basta fazer isso com o resto do alfabeto e salvar com 
+          o mesmo nome da rom, e reabrir a rom no hexpose! bem... agora você me 
+          pergunta POXA CARA, MAS COMO QUE EU VOU SABER QUAL O VALOR DAS LETRAS 
+          EM OUTRO JOGO E TALZ? aí eu digo para você: aí entra a procura relativa! 
+          bem continuando&nbsp;....</font><font size="1" face="Trebuchet MS, Arial, Helvetica">&nbsp; 
+          </font><font face="Trebuchet MS, Arial, Helvetica"> 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>2ª PARTE 
+            DA AULA 2 - PROCURA RELATIVA<br>
+            começando você ainda está aflito? não sabe como achar os valores corretos 
+            da tabela? bem abram a rom do terminator 2 no hexpose bem abriram? 
+            bem agora abram a rom do terminator 2 no seu emulador de nes preferido 
+            ao abrir não apertem nada<br>
+            vocês verão um texto escrito &quot;THE STORY&quot; depois aparecerá 
+            "TEN YEARS AGO..........." bem estão vendo a palavra MACHINE no jogo? 
+            bem vamos usar ela como exemplo agora saiam do jogo e vão para o hexpose 
+            no hexpose, apertem a tecla F6<br>
+            para que seja realizada uma procura relativa na procura relativa, 
+            digite a palavra MACHINE o hexpose perguntará se você quer que seja 
+            feita uma TBL baseada no resultado da pesquisa relativa isso fica 
+            a critério de cada um, mas eu recomendo que você escolha NÃO para 
+            que você treine como fazer tabelas bem apos você escolher, ele irá 
+            para um lugar da ROM onde não está escrito MACHINE, mas os códigos 
+            hexadecimais a partir de 45 até 3D correspondem a palavra MACHINE! 
+            viram como é necessário fazer a tabela? bom agora devemos confirmar 
+            se conseguimos achar aquela palavra MACHINE e se estamos certos.<br>
+            para isso por exemplo digite outro valor como 46 no lugar de 45 aperte 
+            F5 para salvar a rom e abram a rom no seu emulador favorito! eu suponho 
+            que em vez de aparecer MACHINE tenha aparecido NACHINE, não foi? bem 
+            com isso, podemos deduzir que 46=N neste jogo e 45=M então agora é 
+            só fazer a tabela de caracteres completa! abra o table manager e vá 
+            colocando os valores corretamente após terminar a tabela, salve-a 
+            com o nome da rom como eu disse e abra a rom novamente no hexpose<br>
+            agora, aperte F2 no hexpose para procurar pelo texto e digite NACHINE(ou 
+            MACHINE, conforme você tenha deixado por ultimo) e de enter, ah como 
+            é bom! agora podemos ver o texto corretamente no lado direito do hexpose 
+            agora, é só ajeitar o texto corretamente traduzido e pronto!</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>*Feito 
+            por sl0wy no canal '#Aprender-Tradu'</font></font></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+</html>

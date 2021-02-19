@@ -1,0 +1,196 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=FrontPage.Editor.Document>
+<title>Aprenda a traduzir em 1 hora</title>
+<style type="text/css">a{color:black;text-decoration:none;}a:hover{text-decoration:underline;}</style>
+<style type="text/css">body{scrollbar-face-color:#FFCC00;scrollbar-shadow-color:#FFCC00;scrollbar-highlight-color:#FFCC00;scrollbar-3dlight-color:#000000;scrollbar-darkshadow-color:#000000;scrollbar-track-color:#FF9933;scrollbar-arrow-color:#FF9933}</style>
+</head>
+<body background=imagens/indtextb.jpg topmargin=0 leftmargin=0>
+<div align="center"> 
+  <center>
+    <table width="95%" border=1 cellpadding=0 cellspacing=0 bordercolor=#111111 bgcolor="#FFFFFF" style="border-collapse: collapse">
+      <tr> 
+        <td width=100% bgcolor=#FFCC00><p align=right><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><b>Tutorial 
+            de Tradução</b></font></td>
+      </tr>
+      <tr> 
+        <td width=100%><p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----Tutorial 
+            de Tradução ------<br>
+            -----------------------------------------------------------------------------</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Para 
+            começar a traduzir é necessario :<br>
+            Ter os programas de Tradução ...<br>
+            <b>» Hexposure</b>: é um excelente programa &quot;hex editor&quot; 
+            que foi elaborado exclusivamente para mudar os textos das roms de 
+            NES, MegaDrive, Super Nes, Master System e Gameboy. (apesar de ser 
+            capaz de executar todas as funções que qualquer hexadecimal é capaz 
+            de executar). Particulamente, considero este programa a &quot;chave 
+            de tradução&quot;.<br>
+            <b>» SnesTool</b>: é um excelente programa para criar o arquivo IPS 
+            e aplicar o IPS no rom original.<br>
+            <b>» Tile Layer</b>: é um aplicativo de grande utilidade na edição 
+            de tiles (parte gráfica) de jogos de NES, SNES, GAMEBOY e MASTER SYSTEM. 
+            Com ele, você poderá editar os acentos gramaticais usados na língua 
+            portuguesa (se tiver o espaço).<br>
+            <b>» Thingy</b>: é um programa &quot;hex editor&quot; que foi feito, 
+            para ser usado com a TABELA [TBL], esse é o programa que eu mais gosto, 
+            portanto é o que eu recomendo.</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----------------------------------------------------------------------------&nbsp;&nbsp;<br>
+            Saiba como usar o Hexposure</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Para 
+            editar algum jogo usando o HEXPOSURE, copie o arquivo da rom a ser 
+            traduzida para o mesmo diretório em que se encontra o HEXPOSURE.<br>
+            Abra a rom pelo HEXPOSURE. Você verá o arquivo logo que abrir o Heposure&nbsp;<br>
+            &nbsp;&nbsp;<br>
+            Comandos básicos no HEXPOSURE:&nbsp;&nbsp;<br>
+            ESC - Sair do Programa&nbsp;&nbsp;<br>
+            F1 - Comando para ir para byte alvejado&nbsp;&nbsp;<br>
+            F2 - Procura de STRINGS (palavras)&nbsp;&nbsp;<br>
+            F3 - Busca novamente pela mesma palavra&nbsp;&nbsp;<br>
+            F5 - Salva o arquivo alterado&nbsp;&nbsp;<br>
+            F6 - Ler tabela ASCII&nbsp;&nbsp;<br>
+            TAB - Alternar entre o editor HEXA e ASCII&nbsp;&nbsp;<br>
+            PGUP - Sobe uma página&nbsp;&nbsp;<br>
+            PGDW - Desce uma página&nbsp;&nbsp;<br>
+            Crtl + H - Ajuda<br>
+            <br>
+            <b>» </b>Contruindo uma tabela ASCII:&nbsp;<br>
+            1) Descubra o valor das letras em Hexadecimal. O modo mais fácil de 
+            se fazer isso é abrir uma rom no NESTICLE, chamar a opção PATTERN 
+            TABLES apertando F2. Vai aparecer o alfabeto. Clicando em cada letra 
+            você descobre o código HEXADECIMAL de cada letra e número.&nbsp;<br>
+            2) Depois de ter anotado os Hexadecimais de todas as letras e números 
+            do Alfabeto, é hora de criar sua tabela ASCII. Para isso use qualquer 
+            editor de TEXTO (recomendo o EDIT.COM do DOS ou o&nbsp;NOTEPAD do 
+            WINDOWS).&nbsp;<br>
+            <br>
+            <b>» </b>Editando um arquivo TBL (arquivo de tabela ASCII):&nbsp;<br>
+            <br>
+            As duas colunas iniciais do arquivo devem conter o intervalo em hexadecimal 
+            que contém as letras da rom em questão e as outras duas colunas devem 
+            conter o afalbeto e os números que cada hexadecimal representa. Lembre-se: 
+            a terceira coluna deverá ter sempre o sinal de igual (=).<br>
+            <br>
+            Ex.:&nbsp;<br>
+            3A=A<br>
+            3B=B<br>
+            3C=C<br>
+            3D=D<br>
+            3E=E<br>
+            3F=F<br>
+            40=G<br>
+            41=H<br>
+            <br>
+            Isso significa que todos caracteres que estiverem fora desse intervalo, 
+            serão mostrados como um ponto no HEXPOSURE. Isso facilitará a sua 
+            visão geral dos textos na ROM.<br>
+            Dê uma olhada nos arquivos TBL que acompanham o programa para um melhor 
+            entendimento. Após isso tudo, salve o arquivo como um arquivo com 
+            a extensão TBL&nbsp;<br>
+            <br>
+            Ex.:<br>
+            mario.tbl&nbsp;<br>
+            <br>
+            Após criar sua tabela ASCII (font table), apenas leia a ROM imagem 
+            no hexposure. Após a leitura da rom, clique em F6 e digite o nome 
+            do arquivo com extensão TBL (eles devem estar no mesmo diretório). 
+            Se tiver feito tudo corretamente, você será capaz de ver todo o texto 
+            existente no jogo. Para achar alguma palavra (que você<br>
+            tem certeza que existe no game), digite F2 e digite a palavra.&nbsp;<br>
+            <br>
+            ATENÇÃO: A tradução de ROMS é uma coisa muito complexa... Para se 
+            fazer um trabalho boa (profissional) como vc pode ver em alguns sites, 
+            é preciso um certo esforço por parte dos tradutores... Esforço que 
+            só depende de vc.<br>
+            Qualquer duvida procure um Op no canal #Tradu-Roms mas acho que com 
+            essa dica nao vai precisar</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----------------------------------------------------------------------------&nbsp;&nbsp;<br>
+            Mudando os Gráficos no Tlayer</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Essa 
+            é a mais complexa e difícil parte da tradução de roms. Abra a rom 
+            em questão no Tile Layer. Clique em cada tile (que está sempre fora 
+            de ordem) e edite tile por tile. NÃO PENSE EM COLAR AS TILES NA ROM 
+            EM UMA ORDEM VISUALMENTE CORRETA!! VOCÊ IRÁ ACABAR COM A ROM!!! Com 
+            ele, é possível criar os acentos gramaticais, modificar o rosto de 
+            personagem, modificar os títulos, etc.&nbsp;<br>
+            DICAS:<br>
+            * Só coloque os acentos gramaticais quando a rom em questão estiver 
+            tiles vazios (espaço livre), pois muitas roms não possui este espaço, 
+            impossibilitando de colocar os acentos, ou então mude por letras que 
+            não vai utilizar...<br>
+            * Para você organizar os tiles, procure sempre organizar os tiles 
+            na pequena tela chamada CLIPBOARD deste programa.<br>
+            * Antes de editar os tiles, faça um Backup da rom; se no caso der 
+            tudo errado, dificilmente você consertará erros.</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----------------------------------------------------------------------------<br>
+            O QUE É IPS ?</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>O 
+            IPS é o arquivo que contém somente as mudanças que você fez num determinado 
+            arquivo tipo:<br>
+            F0 em tal ponto foi modificado para A1; Com isso em mãos, quem estiver 
+            com a rom original e a &quot;receita do bolo&quot; que é o IPS pode 
+            (com um programa que aplica o IPS no arquivo) modificar a rom para 
+            que ela fique igual a que você traduziu, por ser bem menor, o IPS 
+            é a melhor maneira de distribuir as roms traduzidos pela Internet.<br>
+            <br>
+            =&gt; Aplicação de patches de tradução (IPS)<br>
+            <br>
+            Para aplicar um patch de tradução (.ips), siga os seguintes passos:<br>
+            Certifique-se da posse do rom original (em inglês, o qual se tornará 
+            o rom traduzido após a aplicação do patch, portanto tire um backup 
+            do rom original).<br>
+            Baixe o patch de tradução para o jogo a ser traduzido na Internet 
+            (obviamente um patch para o jogo X só irá traduzir o jogo X).<br>
+            Faça o download do programa SnesTool através do endereço citado no 
+            inicio deste tutorial de tradução.<br>
+            Dentro de um diretório (ex. C:\TRANS) coloque o rom original, o aplicador 
+            de IPS descompactado e o patch de tradução descompactado (com extensão 
+            .ips).<br>
+            Abra um Prompt de MS-DOS e entre no diretório criado (ex. CD C:\TRANS)</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>--------------------------------------------------------------------------------<br>
+            Utilizando o programa SnesTool</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Execute-o.&nbsp;<br>
+            Aperte a tecla U (opção Use IPS)&nbsp;<br>
+            Selecione o patch de tradução.<br>
+            Selecione o rom a ser traduzido (de acordo com os passos anteriores, 
+            o patch e o rom original devem estar no mesmo diretório do aplicador 
+            de IPS)&nbsp;<br>
+            Seguindo os passos acima, seu jogo foi traduzido. Teste-o com o emulador 
+            de sua preferência. Caso o jogo ainda estiver em inglês, siga novamente 
+            os passos e descubra onde você cometeu um erro.</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----------------------------------------------------------------------------<br>
+            Criação de patches de tradução (IPS)</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Coloque 
+            a ROM traduzida e a original junto com o SnesTool em algun<br>
+            diretório, execute o SnesTool, escolha Create IPS, indique a ROM original<br>
+            e dê Enter, depois a traduzida e dê Enter de novo. Saia do programa 
+            e veja<br>
+            se o IPS foi criado.</font></p>
+          <p align=center><font face="Verdana, Arial, Helvetica, sans-serif" size=1>-----------------------------------------------------------------------------<br>
+            Conversão de roms de Genesis - .SMD para .BIN&nbsp;<br>
+            </font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Para 
+            se aplicar um patches de Genesis em um rom de Genesis é&nbsp;necessário 
+            fazer a conversão deste rom do formato .SMD para .BIN, se a rom não 
+            for .BIN por natureza... Siga os seguintes passos:<br>
+            Certifique-se da posse da rom de Genesis a ser traduzida (com extensão 
+            .SMD, se já for .BIN apenas aplique o patch normalmente).<br>
+            Baixe o SMD, programa que tem na parte UTILITÁRIOS, da Home Page ...<br>
+            Descompacte o utilitário em um diretório (ex. c:\traduzir) abra o 
+            dos, escreva...</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Cd\traduzir<br>
+            SMD /CB nomedarom.smd</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Será 
+            criado no diretório do conversor uma cópia deste rom no formato &quot;.bin&quot;.&nbsp;<br>
+            É nesse nova rom com uma nova extensão que você deve aplicar o patch 
+            IPS.</font></p>
+          <p align=left><font face="Verdana, Arial, Helvetica, sans-serif" size=1>*Obs, 
+            eu tinha esse tutorial no meu hd, e modifiquei algumas coisas para 
+            melhor entendimento...</font></p></td>
+      </tr>
+    </table>
+  </center>
+</div>
+</body>
+</html>
