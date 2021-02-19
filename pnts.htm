@@ -5,7 +5,7 @@
 <style type="text/css">a{color:black;text-decoration:none;}a:hover{text-decoration:underline;}</style>
 <style type="text/css">body{scrollbar-face-color:#FFCC00;scrollbar-shadow-color:#FFCC00;scrollbar-highlight-color:#FFCC00;scrollbar-3dlight-color:#000000;scrollbar-darkshadow-color:#000000;scrollbar-track-color:#FF9933;scrollbar-arrow-color:#FF9933}</style>
 <meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
-<title>Tutorial de Tradução</title>
+<title>Tutorial de TraduÃ§Ã£o</title>
 <meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
 <title>Traduzindo textos</title>
 <base target=_self>
@@ -22,60 +22,60 @@
       <tr> 
         <td width=100%><font face="Trebuchet MS, Arial, Helvetica"> 
           <p><font size=1 face="Verdana, Arial, Helvetica, sans-serif">&nbsp;&nbsp;&nbsp; 
-            Aqui está um tutorial de ponteiros,&nbsp; esse tutorial foi feito 
+            Aqui estÃ¡ um tutorial de ponteiros,&nbsp; esse tutorial foi feito 
             por Fserve - Atualizado em 1</font></font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">9</font><font size=1 face="Verdana, Arial, Helvetica, sans-serif"><font face="Trebuchet MS, Arial, Helvetica">/0</font>2</font><font size=1 face="Verdana, Arial, Helvetica, sans-serif">/0</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">4</font></p>
           <font face="Trebuchet MS, Arial, Helvetica">
-          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>1.) Definição</font></p>
-          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>É um valor 
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>1.) DefiniÃ§Ã£o</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>Ã‰ um valor 
             hexadecimal que aponta para o TEXTO.</font></p>
-          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>2.) Modificação</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>2.) ModificaÃ§Ã£o</font></p>
           <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;&nbsp;&nbsp; 
             Vamos pegar uma rom de exemplo imaginar aqui, uma rom de <b>Super 
             Nintendo</b>, que o texto comece no <b>offset </b>'12E0FF' o texto 
-            é 'my dad', como achar o ponteiro ? já falei o básico, agora é simples, 
+            Ã© 'my dad', como achar o ponteiro ? jÃ¡ falei o bÃ¡sico, agora Ã© simples, 
             basta pegar o 12E0FF subtrair pelo <b>header </b>(200h) do Super 
-          Nintendo e você irá achar 12DEFF, ainda não achou os ponteiros... para 
-          achar, basta pegar o valor encontrado e tirar os números da esquerda 
-          de forma que fique apenas 4 números DEFF, agora inverta-os, FFDE, 
-          pronto, FFDE é o ponteiro que aponta para o começo desse texto, e 
-          agora que você tem o valor, é só procurar na rom o <b> hexadecimal</b></font></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
-          (procure na parte em que aparecem aquele monte de números e letras, e
-          não na parte em que aparece o texto do jogo (botei isso porque o
-          tutorial é para iniciantes e muita gente estava fazendo errado... ))</font></b><font face="Trebuchet MS, Arial, Helvetica"><font face="Verdana, Arial, Helvetica, sans-serif" size=1>
+          Nintendo e vocÃª irÃ¡ achar 12DEFF, ainda nÃ£o achou os ponteiros... para 
+          achar, basta pegar o valor encontrado e tirar os nÃºmeros da esquerda 
+          de forma que fique apenas 4 nÃºmeros DEFF, agora inverta-os, FFDE, 
+          pronto, FFDE Ã© o ponteiro que aponta para o comeÃ§o desse texto, e 
+          agora que vocÃª tem o valor, Ã© sÃ³ procurar na rom o <b> hexadecimal</b></font></font><b><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+          (procure na parte em que aparecem aquele monte de nÃºmeros e letras, e
+          nÃ£o na parte em que aparece o texto do jogo (botei isso porque o
+          tutorial Ã© para iniciantes e muita gente estava fazendo errado... ))</font></b><font face="Trebuchet MS, Arial, Helvetica"><font face="Verdana, Arial, Helvetica, sans-serif" size=1>
           &quot;FFDE&quot; 
-          mais próximo do texto, quando você tiver suspeita que achou, de uma 
-          mexidinha, se for ele mesmo, na rom vai mudar alguma coisa... se não 
-          era ele, a rom vai funcionar como se nada tivesse acontecido ou irá 
+          mais prÃ³ximo do texto, quando vocÃª tiver suspeita que achou, de uma 
+          mexidinha, se for ele mesmo, na rom vai mudar alguma coisa... se nÃ£o 
+          era ele, a rom vai funcionar como se nada tivesse acontecido ou irÃ¡ 
           travar.</font></p>
           <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;&nbsp;&nbsp; 
             Agora vou explicar como funciona, quando eu passei o cursor em cima 
             do 'm' de 'my dad', eu olhei numa parte escrita 'offset' e vi escrito 
             12E0FF. Pronto, agora eu peguei esse valor 12E0FF, e retirei 200h, 
             (por que para acharmos ponteiros temos que pegar o offset e subtrair 
-            pelo valor do header do videogame, do Super Nintendo é 200h, do Nintendo 
-            é 10h), quando fiz 12E0FF - 200 achei 12DEFF, mesmo quando achei o 
-            12DEFF, tirei os números da esquerda, deixando somente 1 par, (pois 
-            é sempre assim que estão os ponteiros), ficou DEFF, e depois disso 
-            inverti, ficando FF DE. E isso é o ponteiro, quando você achar 1, 
-            em seguida, você achou a tabela de ponteiros...</font></p>
-          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>3.) Observações</font></p>
+            pelo valor do header do videogame, do Super Nintendo Ã© 200h, do Nintendo 
+            Ã© 10h), quando fiz 12E0FF - 200 achei 12DEFF, mesmo quando achei o 
+            12DEFF, tirei os nÃºmeros da esquerda, deixando somente 1 par, (pois 
+            Ã© sempre assim que estÃ£o os ponteiros), ficou DEFF, e depois disso 
+            inverti, ficando FF DE. E isso Ã© o ponteiro, quando vocÃª achar 1, 
+            em seguida, vocÃª achou a tabela de ponteiros...</font></p>
+          <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>3.) ObservaÃ§Ãµes</font></p>
   </center>
           <p align="left"><font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;&nbsp;
-          </font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1">O header do Super Nintendo é 200h, do Nintendo 10h,
-        do GBA é 0h, caso você saiba 
+          </font></font><font face="Verdana, Arial, Helvetica, sans-serif" size="1">O header do Super Nintendo Ã© 200h, do Nintendo 10h,
+        do GBA Ã© 0h, caso vocÃª saiba 
             headers de outros sistemas, mexer com ponteiros pode ser complicado, 
-            mas não é, se você tentar, vai pegar a manha, e vai ficar fácil, você 
-            logo no começo pode usar a calculadora do Windows em modo cientifico 
-            para HEXADECIMAL, depois, com o costume irá fazer os cálculos de cabeça...</font> 
+            mas nÃ£o Ã©, se vocÃª tentar, vai pegar a manha, e vai ficar fÃ¡cil, vocÃª 
+            logo no comeÃ§o pode usar a calculadora do Windows em modo cientifico 
+            para HEXADECIMAL, depois, com o costume irÃ¡ fazer os cÃ¡lculos de cabeÃ§a...</font> 
   <center>
           <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>4.) Motivos 
             Para Mexer Em Ponteiros!</font> 
           <p><font face="Verdana, Arial, Helvetica, sans-serif" size=1>&nbsp;&nbsp; 
-            Há vários motivos para usar os ponteiros, o mais comum, é a famosa 
-            falta de espaço para escrever o seu texto em português, mas há tradutores 
-            que usam ponteiros para mudar as fontes de lugar, ou então mudar um 
-            tile inteiro, há outro (R_Lopes) que usam ponteiros para 'expandir 
-            os menus dos jogos' ou seja, ponteiro é algo muito útil de você saber.</font></td>
+            HÃ¡ vÃ¡rios motivos para usar os ponteiros, o mais comum, Ã© a famosa 
+            falta de espaÃ§o para escrever o seu texto em portuguÃªs, mas hÃ¡ tradutores 
+            que usam ponteiros para mudar as fontes de lugar, ou entÃ£o mudar um 
+            tile inteiro, hÃ¡ outro (R_Lopes) que usam ponteiros para 'expandir 
+            os menus dos jogos' ou seja, ponteiro Ã© algo muito Ãºtil de vocÃª saber.</font></td>
       </tr>
     </table>
   </center>
